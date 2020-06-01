@@ -2,21 +2,26 @@ import csv
 with open('calls.csv', 'r') as f:
     reader = csv.reader(f)
     calls = list(reader)
+    
+with open('texts.csv', 'r') as f:
+    reader = csv.reader(f)
+    texts = list(reader)
+    
+def only_phone_count(calls):        
+    total_ph = set() 
+    
+    for call in calls: 
+        outgoing_calls, incoming_calls = call[0], call[1]
+        total_ph.add(outgoing_calls)
+        total_ph.add(incoming_calls)
 
-def Recordofparticulardate(calls):
-    new_lists = {}
-    for item in calls:
-        if item[2][3:10] == '09-2016':
-            if item[0] not in new_lists:
-                new_lists[item[0]] = int(item[3])
-            else:
-                new_lists[item[0]] += int(item[3])
-            if item[1] not in new_lists:
-                new_lists[item[1]] = int(item[3])
-            else:
-                new_lists[item[1]] += int(item[3])
-        
-    return new_lists
-phoneno = Recordofparticulardate(calls)
-max_in= max(phoneno, key=phoneno.get)
-print("{} spent the longest time, {} seconds, on the phone during September 2016.".format(max_in,phoneno[max_in]))
+    for text in texts:
+        outgoing_texts, incoming_texts = text[0], text[1]
+        total_ph.add(outgoing_texts)
+        total_ph.add(incoming_texts)
+
+    return len(total_ph)
+
+only_phone_count(calls) # 570
+count = only_phone_count(calls) 
+print('There are', count, 'different telephone numbers in the records.')
