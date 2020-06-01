@@ -1,4 +1,7 @@
 import csv
+with open('texts.csv', 'r') as f:
+    reader = csv.reader(f)
+    texts = list(reader)
 
 with open('calls.csv', 'r') as f:
     reader = csv.reader(f)
