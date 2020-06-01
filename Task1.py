@@ -1,5 +1,4 @@
 import csv
-from datetime import datetime
 with open('calls.csv', 'r') as f:
     reader = csv.reader(f)
     calls = list(reader)
