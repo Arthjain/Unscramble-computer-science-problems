@@ -2,19 +2,18 @@ Analysis
 
 Task 0:
 Time Complexity - O(1)
-Time is constant because this algorithm is running time independent of the input size
+This exercise only require access to a specific value in array. So, no matter the size of the input, it only executes one line.
 
 Task 1:
-Time Complexity - O(n)
-In this algorithm time is linear because even though it has two separate loops that 
-are dependent on the input, each one iterating from 1 to n, these result in O(2n) which 
-in turn, following the Big-O coefficient rule of dropping constants(coefficients in Big-O 
-are negligible with large input sizes), result in the time complexity being simplified to O(n)
+Worst case: O(n)
+merging calls and texts => O(len(calls) + len(texts)) => O(n)
+iterating over rows => O(n)
+  adding phone numbers to set => O(1)
+Total => O(n) + O(n)*O(1) => O(n)
 
 Task 2:
-Time Complexity - O(n)
-It has one for-loop that iterates from 1 to n which 
-results in a running time grows directly in proportion to n therefore time is linear.
+There are two read csv codes and one for loop which depends on the input size n which has been called 1 times so for loop
+complexity is O(n) and the print statement. So the Overall Time Complexity for worst Case is O(n)
 
 Task 3:
 Time Complexity - O(nlog(n))
@@ -25,9 +24,10 @@ However following the Big-O rule of dropping non-dominant terms (less dominant t
 negligible with large input sizes), the time complexity can be simplified to O(nlog(n))
    
 Task 4:
-Time Complexity - O(nlog(n))
-It is super-linear time because even though it has two separate for-loops that 
-are dependent on the input, each one iterating from 1 to n, resulting in O(2n); it also has 
-a sorting function which is 0(nlogn). Combining these two results in 0(2n + nlogn). 
-However following the Big-O rule of dropping non-dominant terms (less dominant terms in Big-O are 
-negligible with large input sizes), the time complexity can be simplified to O(nlog(n))
+Worst case: O(nlogn)
+iterating over calls  => O(n)
+  inside for loop all are constant oprations 
+intersection of marketing_numbers, non_marketing_numbers => O(n)
+difference of marketing_numbers and intersection of marketing_numbers, non_marketing_numbers => O(n)
+sorting List => O(nlogn)
+Total => O(n) + O(n) + O(n) + O(nlogn) => O(nlogn)
