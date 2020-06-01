@@ -18,7 +18,7 @@ results in a running time grows directly in proportion to n therefore time is li
 
 Task 3:
 Time Complexity - O(nlog(n))
-it is super-linear time because even though it has two separate for-loops that 
+It is super-linear time because even though it has two separate for-loops that 
 are dependant on the input, each one iterating from 1 to n, resulting in O(2n); it also has 
 a sorting function which is 0(nlogn). Combining these two results in 0(2n + nlogn). 
 However following the Big-O rule of dropping non-dominant terms (less dominant terms in Big-O are 
@@ -26,7 +26,7 @@ negligible with large input sizes), the time complexity can be simplified to O(n
    
 Task 4:
 Time Complexity - O(nlog(n))
-This algorithm is super-linear time because even though it has two separate for-loops that 
+It is super-linear time because even though it has two separate for-loops that 
 are dependent on the input, each one iterating from 1 to n, resulting in O(2n); it also has 
 a sorting function which is 0(nlogn). Combining these two results in 0(2n + nlogn). 
 However following the Big-O rule of dropping non-dominant terms (less dominant terms in Big-O are 
