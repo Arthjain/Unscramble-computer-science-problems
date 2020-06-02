@@ -5,27 +5,21 @@ Time Complexity - O(1)
 This exercise only require access to a specific value in array. So, no matter the size of the input, it only executes one line.
 
 Task 1:
-O(n) is the worst case
-O(len(calls) and len(texts)) is O(n)
-adding each phone no. to set is O(1)
-Total time complexity is O(n)
+O(len(calls) and len(texts)) is O(n),O(n) is the worst case,Adding each phone no. to set is O(1),Total time complexity is O(n)
 
 Task 2:
-There is one for loop which depends on the input size n which has been called 1 times so for loop
-complexity is O(n) and the print statement. So the Overall Time Complexity for worst Case is O(n)
+There is one for loop which depends on the input size n which has been called 1 times so for loop complexity is O(n) and the print statement. So the Overall Time Complexity for worst Case is O(n)
 
 Task 3:
 Time Complexity - O(nlog(n))
-It is super-linear time because even though it has two separate for-loops that 
-are dependant on the input, each one iterating from 1 to n, resulting in O(2n); it also has 
-a sorting function which is 0(nlogn). Combining these two results in 0(2n + nlogn). 
+It is super-linear time because even though it has for-loops that 
+are dependant on the input,iterating from 1 to n, resulting in O(n); it also has 
+a sorting function which is 0(nlogn). Combining these two results in 0(n + nlogn). 
 The time complexity can be simplified to O(nlog(n))
    
 Task 4:
-O(nlogn) is the worst case
-Itration of calls is O(n)
-Inside for loop all are constant oprations 
+O(nlogn) is the worst case,Inside for loop all are constant oprations,Sorting List is O(nlogn) 
 For both the fraud_numbers, non_fraud_numbers is O(n)
+Itration of calls is O(n)
 Difference and intersection between both is O(n)
-sorting List is O(nlogn)
 Total time complexity is O(nlogn)
