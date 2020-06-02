@@ -16,7 +16,8 @@ for n in range(len(calls)):
             fixed_lines_calls.append(calls[n][1][0:4])
 
 l = len(fixed_lines_calls)
-count = fixed_lines_calls.count('(080)')
+count = np.char.count(fixed_lines_calls,'(080)')
+count=sum(count)
 fixed_lines_calls.sort()
 f=np.unique(fixed_lines_calls)
 print("The numbers called by people in Bangalore have codes:")
