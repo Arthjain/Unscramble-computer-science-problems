@@ -8,19 +8,19 @@ with open('texts.csv', 'r') as f:
     texts = list(reader)
     
 def only_phone_count(calls):        
-    total_ph = set() 
+    total_ph = []
     
     for call in calls: 
         outgoing_calls, incoming_calls = call[0], call[1]
-        total_ph.add(outgoing_calls)
-        total_ph.add(incoming_calls)
+        total_ph.append(outgoing_calls)
+        total_ph.append(incoming_calls)
 
     for text in texts:
         outgoing_texts, incoming_texts = text[0], text[1]
-        total_ph.add(outgoing_texts)
-        total_ph.add(incoming_texts)
-
-    return len(total_ph)
+        total_ph.append(outgoing_texts)
+        total_ph.append(incoming_texts)
+    
+    return len(set(total_ph))
 
 only_phone_count(calls) # 570
 count = only_phone_count(calls) 
