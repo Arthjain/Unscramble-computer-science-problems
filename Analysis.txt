@@ -27,7 +27,7 @@ Task 4:
 Worst case: O(nlogn)
 iterating over calls  => O(n)
   inside for loop all are constant oprations 
-intersection of marketing_numbers, non_marketing_numbers => O(n)
-difference of marketing_numbers and intersection of marketing_numbers, non_marketing_numbers => O(n)
+intersection of fraud_numbers, non_fraud_numbers => O(n)
+difference of fraud_numbers and intersection of fraud_numbers, non_fraud_numbers => O(n)
 sorting List => O(nlogn)
 Total => O(n) + O(n) + O(n) + O(nlogn) => O(nlogn)
