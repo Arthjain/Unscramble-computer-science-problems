@@ -1,22 +1,26 @@
 import csv
+import numpy as np 
 with open('calls.csv', 'r') as f:
     reader = csv.reader(f)
     calls = list(reader)
 fixed_lines_calls = []
+
 for n in range(len(calls)):
-    if '(080)' in calls[n][0][:5]:
-        if '140' in calls[n][1][:3]:
+    if '(080)' in calls[n][0][0:5]:
+        if '140' in calls[n][1][0:3]:
             fixed_lines_calls.append('140')
         elif '(' in calls[n][1][0]:
-            par_index = calls[n][1].find(')')
-            fixed_lines_calls.append(calls[n][1][:par_index+1])
+            j= calls[n][1].find(')')
+            fixed_lines_calls.append(calls[n][1][0:j+1])
         else:
-            fixed_lines_calls.append(calls[n][1][:4])
+            fixed_lines_calls.append(calls[n][1][0:4])
+
 l = len(fixed_lines_calls)
 count = fixed_lines_calls.count('(080)')
-total_calls = sorted(set(fixed_lines_calls))
+fixed_lines_calls.sort()
+f=np.unique(fixed_lines_calls)
 print("The numbers called by people in Bangalore have codes:")
-for i in total_calls:
+for i in f:
     print(i)
 percent = count * 100 / l
 print("{:.2f} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.".format(percent))
