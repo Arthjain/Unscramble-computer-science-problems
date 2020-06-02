@@ -11,15 +11,7 @@ Task 2:
 There is one for loop which depends on the input size n which has been called 1 times so for loop complexity is O(n) and the print statement. So the Overall Time Complexity for worst Case is O(n)
 
 Task 3:
-Time Complexity - O(nlog(n))
-It is super-linear time because even though it has for-loops that 
-are dependant on the input,iterating from 1 to n, resulting in O(n); it also has 
-a sorting function which is 0(nlogn). Combining these two results in 0(n + nlogn). 
-The time complexity can be simplified to O(nlog(n))
+Time Complexity - O(nlog(n)) It is super-linear time because even though it has for-loops that are dependant on the input,iterating from to n, resulting in O(n); it also has a sorting function which is 0(nlogn). Combining these two results in 0(n + nlogn).The time complexity can be simplified to O(nlog(n))
    
 Task 4:
-O(nlogn) is the worst case,Inside for loop all are constant oprations,Sorting List is O(nlogn) 
-For both the fraud_numbers, non_fraud_numbers is O(n)
-Itration of calls is O(n)
-Difference and intersection between both is O(n)
-Total time complexity is O(nlogn)
+O(nlogn) is the worst case,Inside for loop all are constant oprations,Sorting List is O(nlogn) For both the fraud_numbers,non_fraud_numbers is O(n) Itration of calls is O(n) Difference and intersection between both is O(n) Total time complexity is O(nlogn)
