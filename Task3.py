@@ -10,26 +10,22 @@ for n in range(x):
     if '(080)' in calls[n][0][0:5]:
         pass
         if '140' in calls[n][1][0:3]:
-            fixed_lines_calls.append('140')
+            fixed_lines_calls.append(calls[n][1][0:3])
         elif '(' in calls[n][1][0]:
+            """it will only take the string from '(' to ')' excluding both the '('')'"""
             j= calls[n][1].find(')')
-            fixed_lines_calls.append(calls[n][1][0:j+1])
+            fixed_lines_calls.append(calls[n][1][1:j])
         else:
             fixed_lines_calls.append(calls[n][1][0:4])
-
+"""length of the list containg the codes"""
 l = len(fixed_lines_calls)
-count = np.char.count(fixed_lines_calls,'(080)')
+count = np.char.count(fixed_lines_calls,'080')
 count=sum(count)
 fixed_lines_calls.sort()
 f=np.unique(fixed_lines_calls)
 print("The numbers called by people in Bangalore have codes:")
-for i in f:
-    if '(' and ')' in i:
-        a=i.replace('(','')
-        a=a.replace(')','')
-        print(a)
-    else:
-        print(i)
+for i in f:    
+    print(i)
     
 percent = count * 100 / l
 print("{:.2f} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.".format(percent))
