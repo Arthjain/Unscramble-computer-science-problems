@@ -4,9 +4,11 @@ with open('calls.csv', 'r') as f:
     reader = csv.reader(f)
     calls = list(reader)
 fixed_lines_calls = []
-
-for n in range(len(calls)):
+j=0
+x=len(calls)
+for n in range(x):
     if '(080)' in calls[n][0][0:5]:
+        pass
         if '140' in calls[n][1][0:3]:
             fixed_lines_calls.append('140')
         elif '(' in calls[n][1][0]:
@@ -22,6 +24,12 @@ fixed_lines_calls.sort()
 f=np.unique(fixed_lines_calls)
 print("The numbers called by people in Bangalore have codes:")
 for i in f:
-    print(i)
+    if '(' and ')' in i:
+        a=i.replace('(','')
+        a=a.replace(')','')
+        print(a)
+    else:
+        print(i)
+    
 percent = count * 100 / l
 print("{:.2f} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.".format(percent))
