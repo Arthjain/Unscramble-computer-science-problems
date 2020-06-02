@@ -12,7 +12,7 @@ iterating over rows => O(n)
 Total => O(n) + O(n)*O(1) => O(n)
 
 Task 2:
-There are two read csv codes and one for loop which depends on the input size n which has been called 1 times so for loop
+There is one for loop which depends on the input size n which has been called 1 times so for loop
 complexity is O(n) and the print statement. So the Overall Time Complexity for worst Case is O(n)
 
 Task 3:
