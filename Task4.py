@@ -12,8 +12,9 @@ for row in calls:
     fraud_numbers.add(row[0])
 for row in texts:
     non_fraud_numbers.add(row[0])
-    non_fraud_numbers.add(row[1])  
+    non_fraud_numbers.add(row[1])
 print("These numbers could be telemarketers: ")
-fraud_numbers -= fraud_numbers & non_fraud_numbers
-fraud_numbers = sorted(fraud_numbers)
-print('\n'.join(fraud_numbers)) 
+total=fraud_numbers-non_fraud_numbers
+total_new=sorted(total)
+for i in total_new:
+    print(i)
